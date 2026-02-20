@@ -168,6 +168,10 @@
 .ml-3 { margin-left: 0.75rem; }
 .ml-8 { margin-left: 2rem; }
 
+.space-y-1 > * + * {
+  margin-top: 0.25rem;
+}
+
 .space-y-2 > * + * {
   margin-top: 0.5rem;
 }
