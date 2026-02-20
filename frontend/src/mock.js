@@ -113,19 +113,6 @@ export const portfolioData = {
         "Implemented packet injection capabilities for security testing",
         "Maintained and updated kernel modules for offensive security tools"
       ]
-    },
-    {
-      company: "Swecha (Open Source Community)",
-      role: "Lead Coordinator",
-      location: "Gachibowli",
-      duration: "Community Service",
-      description: "Led coordination for Data Science internship program, managing infrastructure and supporting 300+ interns.",
-      responsibilities: [
-        "Coordinated Data Science internship for 300 interns in hybrid model using open-source tools",
-        "Hosted and managed server maintenance for BigBlueButton and Git platforms",
-        "Provided ongoing support by addressing intern queries",
-        "Managed all financial transactions for the internship program"
-      ]
     }
   ],
   
