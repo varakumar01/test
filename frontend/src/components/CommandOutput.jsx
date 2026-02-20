@@ -153,18 +153,18 @@ const CommandOutput = ({ type, data, showAll, showLong }) => {
     case 'experience':
       return (
         <div className="terminal-output">
-          <div className="text-green-400 font-bold mb-3">Work Experience:</div>
+          <div className="text-green-400 font-bold mb-2">Work Experience:</div>
           {data.experience.map((exp, index) => (
-            <div key={index} className="mb-4 border-l-2 border-cyan-600 pl-3">
+            <div key={index} className="mb-3 border-l-2 border-cyan-600 pl-3">
               <div className="text-yellow-400 font-bold text-lg">{exp.role}</div>
               <div className="text-cyan-400 font-bold">{exp.company}</div>
-              <div className="text-gray-400 text-sm mt-1">
+              <div className="text-gray-400 text-sm">
                 {exp.location} • {exp.duration}
               </div>
-              <div className="mt-2">{exp.description}</div>
-              <div className="mt-2">
+              <div className="mt-1">{exp.description}</div>
+              <div className="mt-1">
                 <div className="text-green-400 text-sm font-bold">Key Responsibilities:</div>
-                <div className="ml-3 mt-1">
+                <div className="ml-3">
                   {exp.responsibilities.map((resp, idx) => (
                     <div key={idx} className="text-gray-300 text-sm">• {resp}</div>
                   ))}
