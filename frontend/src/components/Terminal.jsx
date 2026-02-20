@@ -68,6 +68,10 @@ const Terminal = () => {
       case 'skills':
         output = { type: 'skills' };
         break;
+      case 'cat experience':
+      case 'experience':
+        output = { type: 'experience' };
+        break;
       case 'cat certifications':
       case 'certifications':
         output = { type: 'certifications' };
