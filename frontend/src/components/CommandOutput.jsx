@@ -125,6 +125,31 @@ const CommandOutput = ({ type, data }) => {
         </div>
       );
 
+    case 'experience':
+      return (
+        <div className="terminal-output">
+          <div className="text-green-400 font-bold mb-3">Work Experience:</div>
+          {data.experience.map((exp, index) => (
+            <div key={index} className="mb-4 border-l-2 border-cyan-600 pl-3">
+              <div className="text-yellow-400 font-bold text-lg">{exp.role}</div>
+              <div className="text-cyan-400 font-bold">{exp.company}</div>
+              <div className="text-gray-400 text-sm mt-1">
+                {exp.location} • {exp.duration} ({exp.period})
+              </div>
+              <div className="mt-2">{exp.description}</div>
+              <div className="mt-2">
+                <div className="text-green-400 text-sm font-bold">Key Responsibilities:</div>
+                <div className="ml-3 mt-1">
+                  {exp.responsibilities.map((resp, idx) => (
+                    <div key={idx} className="text-gray-300 text-sm">• {resp}</div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      );
+
     case 'social':
       return (
         <div className="terminal-output">
