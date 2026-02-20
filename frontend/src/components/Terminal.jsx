@@ -182,7 +182,12 @@ const Terminal = () => {
               <div className="terminal-error">{item.content}</div>
             )}
             {!['command', 'system', 'error'].includes(item.type) && (
-              <CommandOutput type={item.type} data={portfolioData} />
+              <CommandOutput 
+                type={item.type} 
+                data={portfolioData} 
+                showAll={item.showAll}
+                showLong={item.showLong}
+              />
             )}
           </div>
         ))}
