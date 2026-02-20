@@ -1,121 +1,190 @@
-// Mock Portfolio Data for G Varakumar
+// Mock Portfolio Data for Varakumar G
 
 export const portfolioData = {
   user: {
-    name: "G Varakumar",
+    name: "Varakumar G",
     username: "varakumar",
     role: "Security Developer",
-    bio: "Specialized in kernel development, Android security, and VPN implementations. Passionate about low-level system security and custom ROM development."
+    bio: "Specialized in vulnerability assessment, ICS/SCADA security, and offensive security. Experienced in cloud compliance, kernel development, and automation with AI-driven security solutions."
   },
   
   projects: [
     {
-      name: "Wireguard VPN",
-      description: "Custom implementation of Wireguard VPN protocol for secure networking",
-      technologies: ["Wireguard", "Linux", "Networking", "Cryptography"],
+      name: "Wireguard VPN | Self-Hosted Server",
+      description: "Deployed a WireGuard VPN server on Ubuntu as a personal project to explore network security and system administration. Automated peer setup, routing, and firewall configurations using Bash and iptables to secure and isolate VPN traffic.",
+      technologies: ["Bash", "Linux Networking", "iptables", "WireGuard", "Ubuntu"],
       status: "Active",
-      type: "Security Infrastructure"
+      type: "Network Security"
     },
     {
-      name: "NetHunter & KernelSU Kernel for OP9",
-      description: "Working NetHunter and KernelSU kernel implementation for OnePlus 9 running LineageOS. Enables advanced security testing and root management.",
-      technologies: ["Kernel Development", "Android", "LineageOS", "KernelSU", "NetHunter"],
-      status: "Stable",
-      type: "Kernel Development"
+      name: "NetHunter & KernelSU Kernel for OnePlus 9",
+      description: "Integrated KernelSU into the OnePlus 9 kernel, enabling enhanced root management and custom module support. Developed and maintain NetHunter-compatible custom kernels for the OnePlus 9, supporting HID attacks, packet injection, and offensive security testing tools.",
+      technologies: ["Kernel Development", "Android", "LineageOS", "KernelSU", "NetHunter", "C"],
+      status: "Maintained",
+      type: "Kernel Development & Security"
+    },
+    {
+      name: "InfoScrape | Open-Source Enumeration Tool",
+      description: "Built a Python-based enumeration tool integrating Nmap, Hunter.io, and Tkinter to automate email, IP, and social media data extraction for penetration testing and OSINT operations.",
+      technologies: ["Python", "Nmap", "Tkinter", "Hunter.io API", "OSINT"],
+      status: "Completed",
+      type: "Security Tool Development"
     }
   ],
   
   skills: {
-    "Security & Penetration Testing": [
+    "Offensive Security": [
+      "Vulnerability Assessment & Exploitation",
+      "Zero-Day Research",
+      "OSCP (Ongoing)",
+      "Social Engineering",
+      "MITRE ATT&CK Framework",
+      "Burp Suite",
+      "OWASP Top 10"
+    ],
+    "ICS/SCADA Security": [
+      "ICS/SCADA Security",
+      "Modbus Protocol",
+      "BACnet Protocol",
+      "DNP3",
+      "EtherNet/IP",
+      "PROFINET"
+    ],
+    "Cloud & Compliance": [
+      "CloudSploit",
+      "Azure Security Compliance",
+      "NIST Frameworks",
+      "CIS Benchmarks",
+      "NVD (National Vulnerability Database)",
+      "Google Cloud Platform (GCP)",
+      "Amazon Web Services (AWS)"
+    ],
+    "Defensive Security": [
+      "Incident Response",
+      "SIEM",
+      "Active Directory Security",
+      "Root Security Bypass"
+    ],
+    "Programming & Scripting": [
+      "Python (3+ years)",
+      "Node.js (2 years)",
+      "NASL (2 years)",
+      "Bash Scripting",
+      "NSE (Nmap Scripting)",
+      "MongoDB",
+      "MySQL"
+    ],
+    "Security Tools": [
+      "OpenVAS",
+      "Nessus",
+      "Nmap",
+      "Metasploit",
       "Kali Linux",
-      "NetHunter",
-      "Security Auditing",
-      "Vulnerability Assessment"
-    ],
-    "Kernel & System Development": [
-      "Linux Kernel Development",
-      "Android Kernel Modifications",
-      "KernelSU",
-      "Device Drivers"
-    ],
-    "Networking & Protocols": [
-      "Wireguard VPN",
-      "Network Security",
-      "Protocol Implementation",
-      "Cryptography"
-    ],
-    "Programming Languages": [
-      "C/C++",
-      "Python",
-      "Bash/Shell Scripting",
-      "Assembly"
-    ],
-    "Android Development": [
-      "LineageOS",
-      "Custom ROM Development",
-      "AOSP",
-      "Root Management"
+      "NetHunter"
     ]
   },
   
   experience: [
     {
-      company: "Holmsecurity",
+      company: "Holmsecurity AB",
       role: "Security Developer",
       location: "Sweden (Remote/WFH)",
       duration: "2 years",
-      period: "2023 - Present",
-      description: "Working remotely on security solutions and development projects",
+      description: "Extensive experience in vulnerability assessment and SCADA security, expanding CVE database by 700% through custom NASL script development.",
       responsibilities: [
-        "Security development and implementation",
-        "Vulnerability assessment and penetration testing",
-        "Security tool development",
-        "Remote collaboration with international team"
+        "Extensive experience with OpenVAS and Nessus for vulnerability assessment and management",
+        "Proficient in multiple SCADA communication protocols (SNMP, Modbus, BACnet, EtherNet/IP)",
+        "Independently managed CloudSploit, maintained CIS benchmark compliance, developed multiple Node.js plugins",
+        "Designed and implemented SCADA NASL scripts, expanding CVE database from 400 to 3,200+ vulnerabilities",
+        "Developed AI-driven automation for NASL plugin generation (OpenVAS/Nessus)",
+        "Intermediate proficiency in Microsoft Azure with foundational knowledge of GCP and AWS"
+      ]
+    },
+    {
+      company: "OnePlus 9 Open-Source Development",
+      role: "Developer & Researcher",
+      location: "Open-Source Community",
+      duration: "1+ year",
+      description: "Open-source kernel development and security research for OnePlus 9, focusing on custom ROM and security tool integration.",
+      responsibilities: [
+        "Integrated KernelSU into OnePlus 9 kernel for enhanced root management",
+        "Developed NetHunter-compatible custom kernels supporting HID attacks",
+        "Implemented packet injection capabilities for security testing",
+        "Maintained and updated kernel modules for offensive security tools"
+      ]
+    },
+    {
+      company: "Swecha (Open Source Community)",
+      role: "Lead Coordinator",
+      location: "Gachibowli",
+      duration: "Community Service",
+      description: "Led coordination for Data Science internship program, managing infrastructure and supporting 300+ interns.",
+      responsibilities: [
+        "Coordinated Data Science internship for 300 interns in hybrid model using open-source tools",
+        "Hosted and managed server maintenance for BigBlueButton and Git platforms",
+        "Provided ongoing support by addressing intern queries",
+        "Managed all financial transactions for the internship program"
       ]
     }
   ],
   
   certifications: [
     {
-      name: "TCM Security Certifications",
+      name: "Offensive Security Certified Professional (OSCP)",
+      issuer: "OffSec",
+      status: "Ongoing"
+    },
+    {
+      name: "Practical Ethical Hacking",
       issuer: "TCM Security",
-      status: "Certified",
-      year: "2024"
+      status: "Certified"
     },
     {
-      name: "Advanced Penetration Testing",
-      issuer: "Placeholder Academy",
-      status: "In Progress",
-      year: "2025"
+      name: "Windows and Linux Privilege Escalation",
+      issuer: "TCM Security",
+      status: "Certified"
     },
     {
-      name: "Linux Kernel Development",
-      issuer: "Linux Foundation",
-      status: "Certified",
-      year: "2024"
+      name: "Open-Source Intelligence (OSINT) Fundamentals",
+      issuer: "TCM Security",
+      status: "Certified"
+    },
+    {
+      name: "The External Pentest Playbook",
+      issuer: "TCM Security",
+      status: "Certified"
     }
   ],
   
   social: {
-    github: "https://github.com/gvarakumar",
-    linkedin: "https://linkedin.com/in/gvarakumar",
-    twitter: "https://twitter.com/gvarakumar",
-    email: "varakumar@protonmail.com"
+    github: "https://github.com/varakumar",
+    gitlab: "https://gitlab.com/Tony_01",
+    linkedin: "https://linkedin.com/in/varakumar",
+    email: "varakumar7000@gmail.com",
+    phone: "+91 6309856263"
   },
   
   github: {
-    username: "gvarakumar",
-    profile: "https://github.com/gvarakumar",
+    username: "varakumar",
+    gitlab: "Tony_01",
+    profile: "https://github.com/varakumar",
     repositories: [
       "wireguard-vpn",
       "op9-nethunter-kernel",
       "kernelsu-lineageos",
-      "security-tools"
+      "infoscrape-tool",
+      "security-automation-scripts"
     ],
     stats: {
-      repos: "15+",
+      repos: "20+",
       contributions: "500+",
-      followers: "Placeholder"
+      focus: "Security Tools & Kernel Development"
     }
+  },
+  
+  education: {
+    institution: "Malla Reddy College of Engineering & Technology",
+    degree: "Bachelor of Science in Computer Science",
+    location: "Hyderabad"
   }
 };
