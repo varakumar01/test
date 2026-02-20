@@ -138,7 +138,7 @@ const CommandOutput = ({ type, data }) => {
               <div className="text-yellow-400 font-bold text-lg">{exp.role}</div>
               <div className="text-cyan-400 font-bold">{exp.company}</div>
               <div className="text-gray-400 text-sm mt-1">
-                {exp.location} • {exp.duration} ({exp.period})
+                {exp.location} • {exp.duration}
               </div>
               <div className="mt-2">{exp.description}</div>
               <div className="mt-2">
