@@ -11,6 +11,7 @@ const CommandOutput = ({ type, data }) => {
             <div>  <span className="text-green-400">cat projects</span>       - View projects</div>
             <div>  <span className="text-green-400">cat github</span>         - View GitHub profile</div>
             <div>  <span className="text-green-400">cat skills</span>         - View skills</div>
+            <div>  <span className="text-green-400">cat experience</span>     - View work experience</div>
             <div>  <span className="text-green-400">cat certifications</span> - View certifications</div>
             <div>  <span className="text-green-400">cat social</span>         - View social media links</div>
             <div>  <span className="text-green-400">whoami</span>             - Display user information</div>
