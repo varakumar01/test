@@ -120,7 +120,6 @@ const CommandOutput = ({ type, data }) => {
             <div key={index} className="mb-3 border-l-2 border-yellow-600 pl-3">
               <div className="text-yellow-400 font-bold">{cert.name}</div>
               <div className="text-gray-400">Issuer: {cert.issuer}</div>
-              <div className="text-gray-400">Year: {cert.year}</div>
               <div className={`text-sm ${cert.status === 'Certified' ? 'text-green-500' : 'text-orange-500'}`}>
                 Status: {cert.status}
               </div>
