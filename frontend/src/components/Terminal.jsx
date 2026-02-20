@@ -29,7 +29,10 @@ const Terminal = () => {
   }, [history]);
 
   const handleCommand = (cmd) => {
-    const trimmedCmd = cmd.trim().toLowerCase();
+    const trimmedCmd = cmd.trim();
+    const parts = trimmedCmd.split(' ');
+    const command = parts[0].toLowerCase();
+    const args = parts.slice(1);
     
     // Add command to history
     setHistory(prev => [...prev, { type: 'command', content: cmd }]);
@@ -42,48 +45,70 @@ const Terminal = () => {
 
     // Process command
     let output;
-    switch (trimmedCmd) {
-      case 'help':
-        output = { type: 'help' };
-        break;
-      case 'ls':
-        output = { type: 'ls' };
-        break;
-      case 'clear':
-        setHistory([]);
-        return;
-      case 'whoami':
-        output = { type: 'whoami' };
-        break;
-      case 'cat projects':
-      case 'projects':
+    
+    // Handle ls with flags
+    if (command === 'ls') {
+      const hasAll = args.includes('-a') || args.includes('-al') || args.includes('-la');
+      const hasLong = args.includes('-l') || args.includes('-al') || args.includes('-la');
+      output = { type: 'ls', showAll: hasAll, showLong: hasLong };
+    }
+    // Handle cat command
+    else if (command === 'cat') {
+      const section = args.join(' ').toLowerCase();
+      if (section === 'projects' || section === '.projects') {
         output = { type: 'projects' };
-        break;
-      case 'cat github':
-      case 'github':
+      } else if (section === 'github' || section === '.github') {
         output = { type: 'github' };
-        break;
-      case 'cat skills':
-      case 'skills':
+      } else if (section === 'skills' || section === '.skills') {
         output = { type: 'skills' };
-        break;
-      case 'cat experience':
-      case 'experience':
+      } else if (section === 'experience' || section === '.experience') {
         output = { type: 'experience' };
-        break;
-      case 'cat certifications':
-      case 'certifications':
+      } else if (section === 'certifications' || section === '.certifications') {
         output = { type: 'certifications' };
-        break;
-      case 'cat social':
-      case 'social':
+      } else if (section === 'social' || section === '.social') {
         output = { type: 'social' };
-        break;
-      case 'neofetch':
-        output = { type: 'neofetch' };
-        break;
-      default:
-        output = { type: 'error', content: `Command not found: ${trimmedCmd}. Type 'help' for available commands.` };
+      } else if (section) {
+        output = { type: 'error', content: `cat: ${section}: No such file or directory` };
+      } else {
+        output = { type: 'error', content: 'cat: missing file operand\nTry \'cat --help\' for more information.' };
+      }
+    }
+    else {
+      switch (command) {
+        case 'help':
+        case '--help':
+          output = { type: 'help' };
+          break;
+        case 'clear':
+          setHistory([]);
+          return;
+        case 'whoami':
+          output = { type: 'whoami' };
+          break;
+        case 'projects':
+          output = { type: 'projects' };
+          break;
+        case 'github':
+          output = { type: 'github' };
+          break;
+        case 'skills':
+          output = { type: 'skills' };
+          break;
+        case 'certifications':
+          output = { type: 'certifications' };
+          break;
+        case 'social':
+          output = { type: 'social' };
+          break;
+        case 'experience':
+          output = { type: 'experience' };
+          break;
+        case 'neofetch':
+          output = { type: 'neofetch' };
+          break;
+        default:
+          output = { type: 'error', content: `${command}: command not found` };
+      }
     }
 
     setHistory(prev => [...prev, output]);
