@@ -187,6 +187,12 @@
 .text-white { color: #ffffff; }
 .text-orange-500 { color: #f97316; }
 
+.bg-red-600 { background-color: #dc2626; }
+.px-2 { padding-left: 0.5rem; padding-right: 0.5rem; }
+.py-1 { padding-top: 0.25rem; padding-bottom: 0.25rem; }
+.bg-orange-500 { background-color: #f97316; }
+.bg-green-500 { background-color: #22c55e; }
+
 .font-bold { font-weight: bold; }
 
 .underline { text-decoration: underline; }
