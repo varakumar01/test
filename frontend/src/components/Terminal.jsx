@@ -11,6 +11,16 @@ const Terminal = () => {
   const terminalRef = useRef(null);
 
   useEffect(() => {
+    // Fetch user's public IP
+    fetch('https://api.ipify.org?format=json')
+      .then(res => res.json())
+      .then(data => {
+        portfolioData.user.ip = data.ip;
+      })
+      .catch(() => {
+        portfolioData.user.ip = '127.0.0.1';
+      });
+    
     // Initial prompt without welcome message
     setHistory([
       { type: 'system', content: `${portfolioData.user.name} - ${portfolioData.user.role}` },
