@@ -347,14 +347,13 @@ const CommandOutput = ({ type, data, showAll, showLong }) => {
 `}</pre>
             </div>
             <div className="text-sm space-y-1">
-              <div><span className="text-cyan-400">User:</span> {data.user.username}@kali</div>
-              <div><span className="text-cyan-400">Role:</span> {data.user.role}</div>
-              <div><span className="text-cyan-400">OS:</span> Kali Linux</div>
-              <div><span className="text-cyan-400">Shell:</span> bash</div>
-              <div><span className="text-cyan-400">Projects:</span> {data.projects.length}</div>
-              <div><span className="text-cyan-400">Experience:</span> {data.experience.length} company</div>
-              <div><span className="text-cyan-400">Skills:</span> {Object.keys(data.skills).length} categories</div>
-              <div><span className="text-cyan-400">Certifications:</span> {data.certifications.length}</div>
+              <div><span className="text-cyan-400">User:</span> {data.user.username}</div>
+              <div><span className="text-cyan-400">Role:</span> Cybersecurity Developer</div>
+              <div><span className="text-cyan-400">Specialization:</span> ICS/SCADA Security</div>
+              <div><span className="text-cyan-400">Experience:</span> 3+ Years</div>
+              <div><span className="text-cyan-400">Primary Stack:</span> Python | NASL | Node.js</div>
+              <div><span className="text-cyan-400">Focus:</span> Offensive Automation</div>
+              <div><span className="text-cyan-400">Target Cert:</span> OSCP</div>
             </div>
           </div>
         </div>
