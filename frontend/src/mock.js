@@ -85,6 +85,26 @@ export const portfolioData = {
     ]
   },
   
+  impact: [
+    "Expanded CVE database from 400 → 3200+ (700% growth)",
+    "Automated NASL generation using AI",
+    "Developed 1500+ custom NASL scripts",
+    "Built production-grade SCADA vulnerability checks and Detection Scripts",
+    "Maintained CIS benchmark compliance across cloud infra"
+  ],
+  
+  knownIssues: [
+    { status: "ongoing", text: "Ongoing OSCP Certificate" },
+    { status: "ongoing", text: "Ongoing Lineage OS Op9 Custom ROM" }
+  ],
+  
+  statusMessage: {
+    status: "Not working",
+    message: "Looking for Job opportunity"
+  },
+  
+  resumeLink: "https://drive.google.com/file/d/17c5RtAgWn5TdRQUxnDIvLQogPoUoxgO_/view?usp=sharing",
+  
   experience: [
     {
       company: "Holmsecurity AB",
