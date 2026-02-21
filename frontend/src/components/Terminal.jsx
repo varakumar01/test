@@ -7,17 +7,20 @@ const Terminal = () => {
   const [commandHistory, setCommandHistory] = useState([]);
   const [historyIndex, setHistoryIndex] = useState(-1);
   const [currentCommand, setCurrentCommand] = useState('');
+  const [userIp, setUserIp] = useState('fetching...');
   const inputRef = useRef(null);
   const terminalRef = useRef(null);
 
   useEffect(() => {
-    // Fetch user's public IP
+    // Fetch user's public IP immediately on load
     fetch('https://api.ipify.org?format=json')
       .then(res => res.json())
       .then(data => {
+        setUserIp(data.ip);
         portfolioData.user.ip = data.ip;
       })
       .catch(() => {
+        setUserIp('127.0.0.1');
         portfolioData.user.ip = '127.0.0.1';
       });
     
