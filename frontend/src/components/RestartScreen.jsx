@@ -1,25 +1,6 @@
 import React from 'react';
 import { Plus } from 'lucide-react';
 
-const WatchDogsLogo = () => (
-  <img
-    src="https://customer-assets.emergentagent.com/job_linux-portfolio-demo/artifacts/lnwltie4_6152442610761534938.jpg"
-    alt="Watch Dogs Logo"
-    style={{
-      position: 'fixed',
-      top: '50%',
-      left: '50%',
-      transform: 'translate(-50%, -50%)',
-      width: '800px',
-      height: '800px',
-      opacity: 0.08,
-      zIndex: 5,
-      pointerEvents: 'none',
-      filter: 'brightness(0) invert(1) sepia(1) hue-rotate(90deg) saturate(5)'
-    }}
-  />
-);
-
 const RestartScreen = ({ onRestart }) => {
   return (
     <div 
@@ -35,11 +16,23 @@ const RestartScreen = ({ onRestart }) => {
         alignItems: 'center',
         justifyContent: 'center',
         zIndex: 100,
-        animation: 'fadeIn 1s ease-in'
+        animation: 'fadeIn 1s ease-in',
+        background: 'transparent'
       }}
     >
-      {/* Watch Dogs Logo - Only on restart screen */}
-      <WatchDogsLogo />
+      {/* Watch Dogs Logo at the top */}
+      <img
+        src="https://customer-assets.emergentagent.com/job_linux-portfolio-demo/artifacts/pts0vmtv_watch-dogs-logo-png-transparent-removebg-preview.png"
+        alt="Watch Dogs Logo"
+        style={{
+          width: '350px',
+          height: '350px',
+          marginBottom: '40px',
+          opacity: 0.9,
+          filter: 'brightness(0) invert(1) sepia(1) hue-rotate(90deg) saturate(6) drop-shadow(0 0 15px rgba(0, 255, 0, 0.6))',
+          pointerEvents: 'none'
+        }}
+      />
       
       <div 
         onClick={onRestart}

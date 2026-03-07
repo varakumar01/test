@@ -343,6 +343,7 @@ const Terminal = () => {
         onClick={() => terminalStatus === 'active' && inputRef.current?.focus()}
         style={{
           opacity: terminalStatus === 'shutdown' ? 0 : 1,
+          visibility: terminalStatus === 'shutdown' ? 'hidden' : 'visible',
           transition: 'opacity 0.8s ease-out',
           position: 'relative',
           zIndex: terminalStatus === 'shutdown' ? 1 : 10
