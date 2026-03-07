@@ -190,21 +190,20 @@ const Terminal = () => {
           setTerminalStatus('exiting');
           setHistory(prev => [...prev, 
             { type: 'command', content: cmd },
-            { type: 'system', content: '[+] Terminating session...' }
+            { type: 'system', content: `Connection to ${userIp} closed.` },
+            { type: 'system', content: 'Session ended.' }
           ]);
           
           setTimeout(() => {
             setHistory(prev => [...prev, 
-              { type: 'system', content: `Connection to ${userIp} closed.` },
-              { type: 'system', content: '' },
-              { type: 'system', content: 'Session ended.' }
+              { type: 'zap', content: '[+] Terminating session...' }
             ]);
             
-            // Start transition after messages
+            // Start transition after zap effect completes
             setTimeout(() => {
               setShowParticles(true);
               setTerminalStatus('shutdown');
-            }, 800);
+            }, 500);
           }, 600);
           return;
         default:
@@ -378,7 +377,10 @@ const Terminal = () => {
             {item.type === 'error' && (
               <div className="terminal-error">{item.content}</div>
             )}
-            {!['command', 'system', 'error'].includes(item.type) && (
+            {item.type === 'zap' && (
+              <div className="terminal-output terminal-zap">{item.content}</div>
+            )}
+            {!['command', 'system', 'error', 'zap'].includes(item.type) && (
               <CommandOutput 
                 type={item.type} 
                 data={portfolioData} 

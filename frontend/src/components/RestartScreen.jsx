@@ -2,8 +2,9 @@ import React from 'react';
 import { Plus } from 'lucide-react';
 
 const WatchDogsLogo = () => (
-  <svg
-    viewBox="0 0 200 200"
+  <img
+    src="https://customer-assets.emergentagent.com/job_linux-portfolio-demo/artifacts/vlqctr2o_watch-dogs-logo-png-transparent.png"
+    alt="Watch Dogs Logo"
     style={{
       position: 'fixed',
       top: '50%',
@@ -13,44 +14,10 @@ const WatchDogsLogo = () => (
       height: '800px',
       opacity: 0.08,
       zIndex: 5,
-      pointerEvents: 'none'
+      pointerEvents: 'none',
+      filter: 'brightness(0) invert(1) sepia(1) hue-rotate(90deg) saturate(5)'
     }}
-  >
-    {/* Stylized Watch Dogs inspired logo */}
-    <g>
-      {/* Outer circle */}
-      <circle cx="100" cy="100" r="90" fill="none" stroke="#00ff00" strokeWidth="1" />
-      
-      {/* Inner geometric pattern */}
-      <path
-        d="M 100 20 L 120 50 L 150 40 L 130 70 L 160 80 L 130 100 L 160 120 L 130 130 L 150 160 L 120 150 L 100 180 L 80 150 L 50 160 L 70 130 L 40 120 L 70 100 L 40 80 L 70 70 L 50 40 L 80 50 Z"
-        fill="none"
-        stroke="#00ff00"
-        strokeWidth="1.5"
-      />
-      
-      {/* Central diamond */}
-      <path
-        d="M 100 60 L 130 100 L 100 140 L 70 100 Z"
-        fill="none"
-        stroke="#00ff00"
-        strokeWidth="2"
-      />
-      
-      {/* Cross pattern */}
-      <line x1="100" y1="30" x2="100" y2="170" stroke="#00ff00" strokeWidth="1" opacity="0.6" />
-      <line x1="30" y1="100" x2="170" y2="100" stroke="#00ff00" strokeWidth="1" opacity="0.6" />
-      
-      {/* Corner accents */}
-      <line x1="50" y1="50" x2="70" y2="70" stroke="#00ff00" strokeWidth="1.5" />
-      <line x1="150" y1="50" x2="130" y2="70" stroke="#00ff00" strokeWidth="1.5" />
-      <line x1="50" y1="150" x2="70" y2="130" stroke="#00ff00" strokeWidth="1.5" />
-      <line x1="150" y1="150" x2="130" y2="130" stroke="#00ff00" strokeWidth="1.5" />
-      
-      {/* Central dot */}
-      <circle cx="100" cy="100" r="5" fill="#00ff00" opacity="0.8" />
-    </g>
-  </svg>
+  />
 );
 
 const RestartScreen = ({ onRestart }) => {
