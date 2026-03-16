@@ -6,7 +6,7 @@ export const portfolioData = {
     username: "varakumar",
     role: "Cybersecurity Enthusiast",
     bio: "Specialized in vulnerability assessment, ICS/SCADA security, and offensive security. Experienced in cloud compliance, kernel development, and automation with AI-driven security solutions.",
-    ip: "fetching..." // Will be updated dynamically
+    ip: "kali" // Static default — IP display handled by Terminal component state
   },
   
   projects: [

@@ -9,7 +9,7 @@ const Terminal = () => {
   const [commandHistory, setCommandHistory] = useState([]);
   const [historyIndex, setHistoryIndex] = useState(-1);
   const [currentCommand, setCurrentCommand] = useState('');
-  const [userIp, setUserIp] = useState('fetching...');
+  const [userIp, setUserIp] = useState('kali');
   const [tabMatches, setTabMatches] = useState([]);
   const [tabIndex, setTabIndex] = useState(0);
   const [tabOriginalInput, setTabOriginalInput] = useState('');
@@ -41,18 +41,12 @@ const Terminal = () => {
   };
 
   useEffect(() => {
-    // Fetch user's public IP immediately on load
+    // Fetch user's public IP — kept in component state only, not stored in shared objects
     fetch('https://api.ipify.org?format=json')
       .then(res => res.json())
-      .then(data => {
-        setUserIp(data.ip);
-        portfolioData.user.ip = data.ip;
-      })
-      .catch(() => {
-        setUserIp('127.0.0.1');
-        portfolioData.user.ip = '127.0.0.1';
-      });
-    
+      .then(data => setUserIp(data.ip))
+      .catch(() => setUserIp('127.0.0.1'));
+
     // Initial prompt without welcome message
     setHistory([
       { type: 'system', content: `${portfolioData.user.name} - ${portfolioData.user.role}` },
