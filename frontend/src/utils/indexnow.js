@@ -5,7 +5,7 @@
  */
 
 const INDEXNOW_API_KEY = 'your-indexnow-api-key-here'; // Generate at indexnow.org
-const SITE_URL = 'https://your-domain.com';
+const SITE_URL = 'https://portfolio.dragnux.com';
 
 const SEARCH_ENGINES = {
   bing: 'https://www.bing.com/indexnow',
@@ -88,7 +88,7 @@ export const submitBulkUpdate = (urls) => {
  * 
  * 4. Usage:
  *    import { submitPageUpdate } from './utils/indexnow';
- *    submitPageUpdate('https://your-domain.com/');
+ *    submitPageUpdate('https://portfolio.dragnux.com/');
  * 
  * Note: For static sites, you typically only need to submit once
  * when the site is initially published or significantly updated.

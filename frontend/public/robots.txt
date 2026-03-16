@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://your-domain.com/sitemap.xml
+Sitemap: https://portfolio.dragnux.com/sitemap.xml
 
 # Disallow search parameters
 Disallow: /*?

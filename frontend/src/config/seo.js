@@ -6,7 +6,7 @@
 export const seoConfig = {
   // Site Information
   siteName: 'Varakumar G - Cybersecurity Portfolio',
-  siteUrl: 'https://your-domain.com', // UPDATE THIS
+  siteUrl: 'https://portfolio.dragnux.com', // UPDATE THIS
   author: 'Varakumar G',
   
   // Default Meta Tags
@@ -44,19 +44,12 @@ export const seoConfig = {
   
   // Open Graph Images
   images: {
-    og: '/og-image.jpg', // 1200x630px recommended
-    twitter: '/twitter-card.jpg', // 1200x675px recommended
-    favicon: '/favicon.ico',
-    appleTouchIcon: '/apple-touch-icon.png' // 180x180px
+    og: '/og-image.png',
+    twitter: '/twitter-card.png'
   },
   
-  // Verification Codes (Get from Search Console)
-  verification: {
-    google: 'YOUR_GOOGLE_VERIFICATION_CODE_HERE',
-    bing: 'YOUR_BING_VERIFICATION_CODE_HERE',
-    yandex: '', // Optional
-    pinterest: '', // Optional
-  },
+  // Verification: done via DNS TXT records (Google + Bing)
+  verification: {},
   
   // Analytics (Optional)
   analytics: {
